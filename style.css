@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: cornsilk;
+    
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.images img{
+    display: block;  /* Ensure image is displayed */
+    width: 100%;  /* Let it scale properly */
+    max-width: 180px;  /* Adjust as needed */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Prevent distortion */
+    border-radius: 8px; /* Make it look nice */
+    margin: 0 auto; /* Center inside card */
+}
+footer {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+.header {
+    background-color: #222;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: cornsilk;
+    align-items: center;
+}

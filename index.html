@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EDA Exploratory Data Analysis (EDA) Report: Titanic Passenger Dataset</title>
+    <link  rel="stylesheet" href="./style.css"></link>
+
+</head>
+<body>
+    <header class="header"><h2> OLU EMMANUEL<p>
+        Exploratory Data Analysis (EDA) Report: Titanic Passenger Dataset</h2></header>
+   
+<h3>Link to Python Script - <a href="https://drive.google.com/file/d/1V3usNEfa_22bJb21BhL_bQwz8dco7oCP/view?usp=drive_link">  Click to view Python Script   </a></h3><p></p>
+<section>
+   
+    <h3>Few Images of the Sctipt</h3>
+    <div class="images">
+    <img src="./images/Screenshot 2025-04-04 093916.png" alt="">
+    <img src="./images/Screenshot 2025-04-04 093937.png" alt="">
+    <img src="./images/Screenshot 2025-04-04 093948.png" alt="">
+    <img src="./images/Screenshot 2025-04-04 094000.png" alt="">
+    <img src="./images/Screenshot 2025-04-04 094014.png" alt="">
+
+</div>
+
+
+</section>
+
+
+<h3>Review</h3>
+
+<h4> <h3>1. Introduction</h3>
+<p>The Titanic dataset provides passenger information, including socio-economic status, ticket details, and survival status. This EDA aims to uncover patterns, handle missing values, detect anomalies, and extract meaningful features for further modeling.
+<p>
+<h3>2. Data Overview</h3><p>
+The dataset consists of 418 records and 12 columns, spanning categorical (e.g., Sex, Embarked),numerical (e.g., Age, Fare), and mixed-type features (Cabin, Ticket). Key observations include:<br> <p>
+•	Missing values: Age (~20%), Fare (1 entry), and Cabin (77%) have null values.<br> <p>
+•	Data types: Some categorical variables require encoding for machine learning compatibility.<br> <p>
+•	Potential feature interactions: Family relationships (SibSp, Parch) and passenger class (Pclass) likely impact survival rates.<br> <p>
+
+<h3>3. Data Cleaning & Preprocessing</h3><p>
+To ensure robust analysis, the following steps were taken:<p>
+~ Missing Values:<p>
+•	Age was imputed using the median (resistant to outliers).<p>
+•	Fare was imputed using the median to maintain data consistency.<p>
+•	Cabin was dropped due to excessive missing data (~77%).<p>
+ ~Categorical Encoding:<p>
+•	Sex and Embarked were transformed using Label Encoding.<p>
+•	Embarked missing values were replaced with the most frequent category (mode).<p>
+ ~ Feature Engineering:<p>
+•	Title Extraction: Titles (Mr., Mrs., Miss., etc.) were extracted from names to explore their impact on survival.<p>
+•	Family Size: A new feature FamilySize = SibSp + Parch + 1 was created to analyze family influence.<p>
+
+<h3>4. Univariate & Bivariate Analysis</h3>
+📊 Distributions & Summary Statistics<p>
+•	Age: Skewed right, with a concentration around 30 years.<p>
+•	Fare: Highly right-skewed, with a few expensive tickets acting as outliers.<p></p>
+•	Pclass: Clear segmentation, with most passengers in 3rd class.<p></p>
+📈 Survival Trends<p></p>
+•	Sex: Females had a significantly higher survival rate than males.<p></p>
+•	Pclass: 1st-class passengers had the highest survival probability.<p></p>
+•	Fare & Survival: Higher fares were correlated with increased survival chances.<p></p>
+📉 Outlier Detection & Handling<p></p>
+•	Outliers in Fare and Age were detected using Z-score analysis.<p></p>
+•	Extreme outliers (>3 standard deviations) were removed to prevent model bias.<p></p>
+
+5. Key Insights & Recommendations<p></p>
+🔍 Insights:<p></p>
+1.	Women and children were prioritized during the evacuation, evident from survival rates.<p></p>
+2.	Passenger class strongly influenced survival, reinforcing the socioeconomic disparities aboard.<p></p>
+3.	Family size has a non-linear impact—too large or too small families had lower survival chances.<p></p>
+4.	Title extraction provides a new, meaningful categorical variable that correlates with social status and survival.<p></p>
+</h4>
+</body>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 OLU EMMANUEL. All rights reserved.</p>
+    </footer>
+</html>
